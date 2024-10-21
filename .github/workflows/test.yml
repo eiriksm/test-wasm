@@ -29,4 +29,4 @@ jobs:
         run: composer --verbose install
 
       - name: Run tests
-        run: ./vendor/bin/drush si --existing-config -y
+        run: drush si --db-url=sqlite://../../../.db.sqlite#test --existing-config -y
